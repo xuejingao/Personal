@@ -1,0 +1,48 @@
+{
+  "title": "Software Engineer",
+  "summary": "I'm passionate about Computer Software development, looking always for different and most efficient solutions to daily problems of clients. Always growing as a person and as a co worker, looking always to give my best for the company I'm working with.",
+  "studies": [
+    {
+      "institute": "Hunter College",
+      "logo": "https://d32ogoqmya1dw8.cloudfront.net/images/liberalarts/capstones/hunter/1454363445.v7.jpg",
+      "title": "Bachelor in Computer Science",
+      "durationInYears": "4",
+      "graduationYear": 2017
+    }
+  ],
+  "certifications": [
+    {
+      "logo": "https://www.certmetrics.com/api/ob/image/amazon/c/1",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+      "title": "AWS Certified Solutions Architect - Associate",
+      "issuer": "Amazon Web Services",
+      "issueDate": "2018-09-01",
+      "expiryDate": "2020-09-01",
+      "verificationLink": "https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-09-13&ci=AWS00487431"
+    },
+    {
+      "logo": "https://acclaim-production-app.s3.amazonaws.com/images/86629924-6c10-442c-8742-05ff5e45e922/Oracle-Certification-badge_OC-Associate.png",
+      "url": "https://education.oracle.com/es/oracle-certified-associate-java-se-8-programmer/trackp_333",
+      "title": "Oracle Certified Associate, Java SE 8 Programmer",
+      "issuer": "Oracle",
+      "issueDate": "2016-05-01",
+      "verificationLink": "https://www.youracclaim.com/badges/aa466aec-ddbc-4e67-8038-aa8466a4aef9/linked_in_profile"
+    }
+  ],
+  "experiences": [
+    {
+      "companyName": "ServiceRocket",
+      "logo": "https://media.licdn.com/dms/image/C560BAQE0UGAq3qc4PA/company-logo_200_200/0?e=1547078400&v=beta&t=wPEtCDSDDI8HHn779fD3yG5tr95YQC6pe71f81HU7oQ",
+      "url": "https://www.servicerocket.com/",
+      "roles": [
+        {
+          "title": "Software developer",
+          "description": "Development of Application (bots, add-ons) that help simplify day-to-day work for companies using platforms such as Workplace or Atlassian products. To achieve this purpose, Serverless framework is being used taking advantage of AWS stack technologies.",
+          "startDate": "2018-01-01",
+          "currentJob": true,
+          "location": "Santiago Province, Chile"
+        },
+      ]
+    }
+  ]
+}
