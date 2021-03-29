@@ -23,6 +23,18 @@ const useStyles = makeStyles({
   }
 });
 
+const renderSocials = (href, icon) => {
+  return (
+    <>
+      <li>
+        <a href={href}>
+          <i className="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </>
+  );
+}
+
 const Banner = () => {
   const styleClasses = useStyles();
 
@@ -35,30 +47,12 @@ const Banner = () => {
         <p><small>{title}</small></p>
         <h3><strong>{name}</strong></h3>
         <p>{summary}</p>
-        <ol>
-
-        </ol>
+        <ul>
+          <li>
+            <i className="fa fa-linkedin-square"></i>
+          </li>
+        </ul>
       </div>
-      {/* <Row center>
-        <Col >
-          <Card>
-            <CardImg className={styleClasses.profile} src={pfp} />
-            <CardTitle>Xuejin Gao</CardTitle>
-          </Card>
-        </Col>
-        <Col >
-          <Card>
-            <CardBody>
-              <CardText>
-                {title}
-              </CardText>
-              <CardText>
-                {summary}
-              </CardText>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>       */}
     </>
   )
 }
