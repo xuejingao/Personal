@@ -1,24 +1,46 @@
 import React from 'react';
 import { Row, Col, Card, CardBody, CardTitle, CardImg, CardText } from 'reactstrap';
-import pfp from '../../utils/smiley.png';
+import { makeStyles } from '@material-ui/styles';
+import pfp from '../../utils/circled-x.png';
+import data from '../../utils/profile.json'
 
-const aboutMe = "Hello I'm Xuejin";
+const {
+  title,
+  summary,
+} = data;
+
+const useStyles = makeStyles({
+  profile: {
+    width: '26em'
+  },
+  center: {
+    contextAligh: 'center'
+  },
+  image
+});
 
 const Banner = () => {
+  const styleClasses = useStyles();
+
   return (
     <>
       <Row center>
-        <Col sm="6">
+        <Col >
           <Card>
-            <CardImg src={pfp} />
+            <CardImg className={styleClasses.profile} src={pfp} />
             <CardTitle>Xuejin Gao</CardTitle>
           </Card>
         </Col>
-        <Col sm="6">
+        <Col >
           <Card>
-            <CardText>
-              {aboutMe}
-            </CardText>
+            <CardBody>
+              <CardText>
+                {title}
+              </CardText>
+              <CardText>
+                {summary}
+              </CardText>
+            </CardBody>
           </Card>
         </Col>
       </Row>      

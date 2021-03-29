@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { makeStyles } from '@material-ui/styles'
 import {
   Collapse,
   Navbar,
@@ -8,13 +9,24 @@ import {
   Nav,
   NavItem,
 } from "reactstrap";
-import Logo from "../../utils/smiley.png";
+
+import Logo from "../../utils/circled-x.png";
 
 const links = [
   { href: "/", text: "About Me" },
   { href: "/resume", text: "Resume" },
   { href: "/portfolio", text: "Portfolio" },
 ];
+
+const useStyles = makeStyles({
+  title: {
+    backgroundColor: "#fff",
+    color: "#23260E"
+  },
+  icon: {
+    width: "55px"
+  }
+});
 
 const CreateNavItem = ({ href, text }) => (
   <NavItem className="mx-4">
@@ -26,13 +38,13 @@ const CreateNavItem = ({ href, text }) => (
 
 const NavBar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const styleClasses = useStyles();
 
   return (
     <>
-      <Navbar color="dark" className="p-3" dark expand="md">
+      <Navbar color="" className="p-3" expand="md">
         <NavbarBrand href="/">
-          <img src={Logo} />
-          Xuejin Gao
+          <img className={styleClasses.icon} src={Logo} alt="test" />
         </NavbarBrand>
         <NavbarToggler onClick={() => setCollapsed(!collapsed)} />
         <Collapse isOpen={collapsed} navbar>
