@@ -18,11 +18,16 @@ const useStyles = makeStyles({
     boxShadow: '0px 0px 30px #aaa',
   },
   center: {
-    contextAligh: 'center'
+    // justify: "center"
   },
-  image: {
-    width: '10em'
-  }
+  gridContainer: {
+    display: 'grid',
+    width: '70em',
+    gridTemplateColumns: '.95fr 1fr',
+    justifyItems: 'center',
+    margin: 'auto',
+    marginTop: '2em'
+  } 
 });
 
 const renderSocial = (href, icon) => {
@@ -39,32 +44,32 @@ const renderSocial = (href, icon) => {
 
 const Banner = () => {
   const styleClasses = useStyles();
-  console.log(email)
 
   return (
     <>
-
-      <div>
-        <div>
-          <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
-        </div>
-        <div>
-          <p><small>{title}</small></p>
-          <h3><strong>{name}</strong></h3>
-          <p>{summary}</p>
-          <ul>
-            <li>
-              <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
-                <i className="far fa-envelope"></i>
-              </a>
-            </li>
-            {
-              socials.map(obj => {
-                return renderSocial(obj.href, obj.fontAwesome5);
-              })
-            }
-          </ul>
-        </div>
+      <div className={styleClasses.center}>
+        <div className={styleClasses.gridContainer}>
+          <div>
+            <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
+          </div>
+          <div>
+            <p><small>{title}</small></p>
+            <h2><strong>{name}</strong></h2>
+            <p>{summary}</p>
+            <ul>
+              <li>
+                <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
+                  <i className="far fa-envelope"></i>
+                </a>
+              </li>
+              {
+                socials.map(obj => {
+                  return renderSocial(obj.href, obj.fontAwesome5);
+                })
+              }
+            </ul>
+          </div>
+        </div>  
       </div>
     </>
   )
