@@ -1,5 +1,6 @@
 {
   "name": "Xuejin Gao",
+  "email": "gxuejin13@gmail.com",
   "title": "Software Engineer",
   "summary": "I'm passionate about Computer Software development, looking always for different and most efficient solutions to daily problems of clients. Always growing as a person and as a co worker, looking always to give my best for the company I'm working with.",
   "studies": [
@@ -9,6 +10,18 @@
       "title": "Bachelor in Computer Science",
       "durationInYears": "4",
       "graduationYear": 2017
+    }
+  ],
+  "socials": [
+    {
+      "site": "Github",
+      "href": "https://github.com/xuejingao",
+      "fontAwesome5": "fab fa-github"
+    },
+    {
+      "site": "Linkedin",
+      "href": "https://linkedin.com/in/xuejingao",
+      "fontAwesome5": "fab fa-linkedin"
     }
   ],
   "certifications": [

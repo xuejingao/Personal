@@ -5,8 +5,10 @@ import data from '../../utils/profile.json'
 
 const {
   name,
+  email,
   title,
   summary,
+  socials
 } = data;
 
 const useStyles = makeStyles({
@@ -23,12 +25,12 @@ const useStyles = makeStyles({
   }
 });
 
-const renderSocials = (href, icon) => {
+const renderSocial = (href, icon) => {
   return (
     <>
       <li>
-        <a href={href}>
-          <i className="fab fa-linkedin-in"></i>
+        <a target="_blank" rel="noreferrer" href={href}>
+          <i className={icon}></i>
         </a>
       </li>
     </>
@@ -37,21 +39,32 @@ const renderSocials = (href, icon) => {
 
 const Banner = () => {
   const styleClasses = useStyles();
+  console.log(email)
 
   return (
     <>
+
       <div>
-        <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
-      </div>
-      <div>
-        <p><small>{title}</small></p>
-        <h3><strong>{name}</strong></h3>
-        <p>{summary}</p>
-        <ul>
-          <li>
-            <i className="fa fa-linkedin-square"></i>
-          </li>
-        </ul>
+        <div>
+          <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
+        </div>
+        <div>
+          <p><small>{title}</small></p>
+          <h3><strong>{name}</strong></h3>
+          <p>{summary}</p>
+          <ul>
+            <li>
+              <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
+                <i className="far fa-envelope"></i>
+              </a>
+            </li>
+            {
+              socials.map(obj => {
+                return renderSocial(obj.href, obj.fontAwesome5);
+              })
+            }
+          </ul>
+        </div>
       </div>
     </>
   )

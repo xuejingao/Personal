@@ -4,7 +4,11 @@ import Banner from '../../components/banner'
 
 const HomePage = () => {
   return (
-    <Banner></Banner>
+    <>
+      <Banner></Banner>
+      <Banner></Banner>
+      <Banner></Banner>
+    </>
   );
 }
 
