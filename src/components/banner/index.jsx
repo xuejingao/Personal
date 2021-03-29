@@ -31,14 +31,13 @@ const useStyles = makeStyles({
 });
 
 const renderSocial = (href, icon) => {
+  const classes = `fa-2x ${icon}`  
   return (
-    <>
-      <li>
-        <a target="_blank" rel="noreferrer" href={href}>
-          <i className={icon}></i>
-        </a>
-      </li>
-    </>
+    <li>
+      <a target="_blank" rel="noreferrer" href={href}>
+        <i className={classes}></i>
+      </a>
+    </li>
   );
 }
 
@@ -59,7 +58,7 @@ const Banner = () => {
             <ul>
               <li>
                 <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
-                  <i className="far fa-envelope"></i>
+                  <i className="far fa-envelope fa-2x"></i>
                 </a>
               </li>
               {
