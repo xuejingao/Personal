@@ -1,22 +1,26 @@
 import React from 'react';
-import { Row, Col, Card, CardBody, CardTitle, CardImg, CardText } from 'reactstrap';
 import { makeStyles } from '@material-ui/styles';
 import pfp from '../../utils/circled-x.png';
 import data from '../../utils/profile.json'
 
 const {
+  name,
   title,
   summary,
 } = data;
 
 const useStyles = makeStyles({
-  profile: {
-    width: '26em'
+  profileImg: {
+    width: '22em',
+    borderRadius: '50%',
+    boxShadow: '0px 0px 30px #aaa',
   },
   center: {
     contextAligh: 'center'
   },
-  image
+  image: {
+    width: '10em'
+  }
 });
 
 const Banner = () => {
@@ -24,7 +28,18 @@ const Banner = () => {
 
   return (
     <>
-      <Row center>
+      <div>
+        <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
+      </div>
+      <div>
+        <p><small>{title}</small></p>
+        <h3><strong>{name}</strong></h3>
+        <p>{summary}</p>
+        <ol>
+
+        </ol>
+      </div>
+      {/* <Row center>
         <Col >
           <Card>
             <CardImg className={styleClasses.profile} src={pfp} />
@@ -43,7 +58,7 @@ const Banner = () => {
             </CardBody>
           </Card>
         </Col>
-      </Row>      
+      </Row>       */}
     </>
   )
 }
