@@ -15,58 +15,77 @@ const useStyles = makeStyles({
   profileImg: {
     width: '22em',
     borderRadius: '50%',
-    boxShadow: '0px 0px 30px #aaa',
-  },
-  center: {
-    // justify: "center"
+    boxShadow: '0px 0px 60px #aaa',
   },
   gridContainer: {
     display: 'grid',
-    width: '70em',
-    gridTemplateColumns: '.95fr 1fr',
+    width: '75em',
+    gridTemplateColumns: '.75fr 1.25fr',
     justifyItems: 'center',
     margin: 'auto',
-    marginTop: '2em'
-  } 
+    marginTop: '3em',
+    marginBottom: '4em'
+  },
+  table: {
+    display: 'table',
+    // margin: '2em 0'
+  },
+  horizontalUl: {
+    listStyle: 'none',
+    padding: '0',
+    margin: '1em 0'
+  },
+  inline: {
+    display: 'inline',
+    margin: '1em'
+  }
 });
 
-const renderSocial = (href, icon) => {
+
+const renderSocial = (href, icon, key, style) => {
   const classes = `fa-2x ${icon}`  
   return (
-    <li>
+    <li key={key} className={style}>
       <a target="_blank" rel="noreferrer" href={href}>
         <i className={classes}></i>
       </a>
     </li>
   );
-}
+};
 
 const Banner = () => {
   const styleClasses = useStyles();
 
   return (
     <>
-      <div className={styleClasses.center}>
+      <div>
         <div className={styleClasses.gridContainer}>
           <div>
             <img src={pfp} alt="My Profile Display" className={styleClasses.profileImg}/>
           </div>
+          
           <div>
-            <p><small>{title}</small></p>
-            <h2><strong>{name}</strong></h2>
-            <p>{summary}</p>
-            <ul>
-              <li>
-                <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
-                  <i className="far fa-envelope fa-2x"></i>
-                </a>
-              </li>
-              {
-                socials.map(obj => {
-                  return renderSocial(obj.href, obj.fontAwesome5);
-                })
-              }
-            </ul>
+            <div>
+              <p><small>{title}</small></p>
+              <h2><strong>{name}</strong></h2>
+              <p>{summary}</p>
+            </div>
+            
+            <div className={styleClasses.table}>
+              <ul className={styleClasses.horizontalUl}>
+                <li key="1" className={styleClasses.inline}>
+                  <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
+                    <i className="far fa-envelope fa-2x"></i>
+                  </a>
+                </li>
+                {
+                  socials.map((obj, index) => {
+                    return renderSocial(obj.href, obj.fontAwesome5, index+1, styleClasses.inline);
+                  })
+                }
+              </ul>
+            </div>
+            
           </div>
         </div>  
       </div>

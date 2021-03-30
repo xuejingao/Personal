@@ -19,10 +19,6 @@ const links = [
 ];
 
 const useStyles = makeStyles({
-  title: {
-    backgroundColor: "#fff",
-    color: "#23260E"
-  },
   icon: {
     width: "55px"
   }
@@ -42,7 +38,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Navbar color="" className="p-3" expand="md">
+      <Navbar className={`p-3`} expand="md">
         <NavbarBrand href="/">
           <img className={styleClasses.icon} src={Logo} alt="test" />
         </NavbarBrand>

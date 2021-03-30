@@ -43,6 +43,13 @@
       "verificationLink": "https://www.youracclaim.com/badges/aa466aec-ddbc-4e67-8038-aa8466a4aef9/linked_in_profile"
     }
   ],
+  "projects": [
+    {
+      "title": "title",
+      "url": "url",
+      "desc": "desc"
+    }
+  ],
   "experiences": [
     {
       "companyName": "ServiceRocket",
