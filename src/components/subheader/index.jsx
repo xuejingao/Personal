@@ -3,11 +3,12 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
   container: {
-    backgroundColor: 'yellow',
-    justifyItems: 'center'
+    justifyItems: 'center',
+    display: 'grid',
+    // width: '75em',
+    gridTemplateColumns: '.75fr 1.25fr',
   },
   position: {
-    backgroundColor: 'purple',
     width: '7em',
   },
   flex: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
+import { Button } from '@material-ui/core';
 import pfp from '../../utils/circled-x.png';
 import data from '../../utils/profile.json'
 
@@ -33,11 +34,10 @@ const useStyles = makeStyles({
   horizontalUl: {
     listStyle: 'none',
     padding: '0',
-    margin: '1em 0'
+    margin: '1em 1em'
   },
   inline: {
     display: 'inline',
-    margin: '1em'
   }
 });
 
@@ -46,9 +46,11 @@ const renderSocial = (href, icon, key, style) => {
   const classes = `fa-2x ${icon}`  
   return (
     <li key={key} className={style}>
-      <a target="_blank" rel="noreferrer" href={href}>
-        <i className={classes}></i>
-      </a>
+      <Button>
+        <a target="_blank" rel="noreferrer" href={href}>
+          <i className={classes}></i>
+        </a>
+      </Button>
     </li>
   );
 };
@@ -74,9 +76,11 @@ const Banner = () => {
             <div className={styleClasses.table}>
               <ul className={styleClasses.horizontalUl}>
                 <li key="1" className={styleClasses.inline}>
-                  <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
-                    <i className="far fa-envelope fa-2x"></i>
-                  </a>
+                  <Button>
+                    <a href={"mailto:" + email + "?subject=Mail from Our Site"}>
+                      <i className="far fa-envelope fa-2x"></i>
+                    </a>  
+                  </Button>
                 </li>
                 {
                   socials.map((obj, index) => {
